@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@uapp/bridge": ["../bridge/src"],
+      "@uapp/schema": ["../schema/src"],
+      "@uapp/utils": ["../utils/src"]
+    },
+    "types": ["element-plus/global"]
+  },
+  "include": ["src/**/*", "vite.shared.ts", "env.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

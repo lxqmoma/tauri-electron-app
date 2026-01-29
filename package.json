@@ -1,0 +1,31 @@
+{
+  "name": "uapp",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "description": "UApp - A cross-platform configuration App",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev:web": "pnpm -F @uapp/web dev",
+    "dev:electron": "pnpm -F @uapp/electron dev",
+    "dev:tauri": "pnpm -F @uapp/tauri tauri dev",
+    "build:web": "pnpm -F @uapp/web build",
+    "build:electron:win": "pnpm -F @uapp/electron build:win",
+    "build:tauri": "pnpm -F @uapp/tauri tauri build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r exec rm -rf dist out node_modules/.vite",
+    "clean:all": "pnpm -r exec rm -rf dist out node_modules && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^7.2.0",
+    "@types/node": "^22.19.7",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3"
+  }
+}

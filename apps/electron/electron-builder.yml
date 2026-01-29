@@ -1,0 +1,27 @@
+appId: com.u.app
+productName: UApp
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**/*
+  - '!**/*.map'
+extraMetadata:
+  main: out/main/index.js
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+mac:
+  target: dmg
+  hardenedRuntime: true
+  gatekeeperAssess: false
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+linux:
+  target: AppImage

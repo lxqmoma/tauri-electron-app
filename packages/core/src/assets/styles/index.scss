@@ -1,0 +1,26 @@
+@use './variables.scss' as *;
+
+/* Reset or Base styles */
+body {
+  background-color: $bg-color-page;
+  color: $text-color-primary;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-color;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $text-color-secondary;
+}

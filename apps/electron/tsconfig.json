@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "typeRoots": ["node_modules/@types", "src/preload"],
+    "outDir": "out/main"
+  },
+  "include": ["src/main/**/*", "src/preload/**/*", "src/renderer/**/*"],
+  "exclude": ["node_modules", "out", "dist"]
+}

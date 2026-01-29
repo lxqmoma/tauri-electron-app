@@ -1,0 +1,24 @@
+{
+  "name": "@uapp/web",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@uapp/bridge": "workspace:*",
+    "@uapp/core": "workspace:*",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.2.0"
+  }
+}
